@@ -1,0 +1,22 @@
+spring:
+  application:
+  name: bai5
+  ai:
+    openai:
+      base-url: https:openrouter.ai/api/v1
+      api-key: ${OPEN_ROUTER_API_KEY}
+      chat:
+        model: google/gemini-2.5-flash
+        max-retries: 3
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: ollama:llama3.1:latest
+cache:
+  prompt:
+    ttl-seconds: 60
+    max-size: 500
+langfuse:
+  host: ${LANGFUSE_HOST}
+  public-key: ${LANGFUSE_PUBLIC_KEY}
+  secret-key: ${LANGFUSE_SECRET_KEY}
